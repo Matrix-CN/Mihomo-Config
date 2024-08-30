@@ -241,7 +241,7 @@ rules:
   - RULE-SET,Lan,直连
   - RULE-SET,China,国内连接
   - RULE-SET,China_Domain,国内连接
-  - RULE-SET,Proxy,手动代理
-  - RULE-SET,Proxy_Domain,手动代理
+  - RULE-SET,Proxy,默认代理
+  - RULE-SET,Proxy_Domain,默认代理
   - GEOIP,CN,国内连接
   - MATCH,漏网之鱼
