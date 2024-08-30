@@ -268,20 +268,20 @@ rule-providers:
     path: ./ruleset/China_Domain.yaml
     interval: 86400
 
-  Proxy:
+  Global:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy.yaml"
-    path: ./ruleset/Proxy.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.yaml"
+    path: ./ruleset/Global.yaml
     interval: 86400
   
-  Proxy_Domain:
+  Global_Domain:
     type: http
     behavior: domain
     format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Domain.yaml"
-    path: ./ruleset/Proxy_Domain.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Domain.yaml"
+    path: ./ruleset/Global_Domain.yaml
     interval: 86400
 rules:
   - RULE-SET,Apple,苹果服务
@@ -296,7 +296,7 @@ rules:
   - RULE-SET,Lan,直连
   - RULE-SET,China,国内连接
   - RULE-SET,China_Domain,国内连接
-  - RULE-SET,Proxy,默认代理
-  - RULE-SET,Proxy_Domain,默认代理
+  - RULE-SET,Global,默认代理
+  - RULE-SET,Global_Domain,默认代理
   - GEOIP,CN,国内连接
   - MATCH,漏网之鱼
