@@ -261,20 +261,20 @@ rule-providers:
     path: ./ruleset/China_Domain.yaml
     interval: 86400
 
-  Global:
+  Proxy:
     type: http
     behavior: classical
     format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.yaml"
-    path: ./ruleset/Global.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy.yaml"
+    path: ./ruleset/Proxy.yaml
     interval: 86400
   
-  Global_Domain:
+  Proxy_Domain:
     type: http
     behavior: domain
     format: yaml
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Domain.yaml"
-    path: ./ruleset/Global_Domain.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Domain.yaml"
+    path: ./ruleset/Proxy_Domain.yaml
     interval: 86400
 rules:
   - RULE-SET,Apple,苹果服务
@@ -289,8 +289,7 @@ rules:
   - RULE-SET,Lan,直连
   - RULE-SET,China,直连
   - RULE-SET,China_Domain,直连
-  - RULE-SET,Global,手动代理
-  - RULE-SET,Global_Domain,手动代理
+  - RULE-SET,Proxy,手动代理
+  - RULE-SET,Proxy_Domain,手动代理
   - GEOIP,CN,直连
   - MATCH,手动代理
-
