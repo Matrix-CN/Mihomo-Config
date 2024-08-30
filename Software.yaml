@@ -49,7 +49,10 @@ proxies:
     udp: true
 
 proxy-groups:
-
+  - name: 全部节点
+    type: select
+    include-all: true
+  
   - name: 默认代理
     type: select
     proxies: [全部节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,其它地区]
@@ -87,10 +90,6 @@ proxy-groups:
     proxies: [默认代理,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,其它地区,直连]
     
   #分隔,下面是地区分组
-  - name: 全部节点
-    type: select
-    include-all: true
-
   - name: 🇭🇰 香港节点
     type: select
     include-all: true
