@@ -50,25 +50,21 @@ proxies:
 
 proxy-groups:
 
-  - name: 全部节点
-    type: select
-    include-all: true
-
   - name: 手动代理
     type: select
-    proxies: [🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,全部节点]
+    proxies: [全部节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点]
 
   - name: 苹果服务
     type: select
-    proxies: [手动代理,直连]
+    proxies: [直连,手动代理]
 
   - name: 微软服务
     type: select
-    proxies: [手动代理,直连]
+    proxies: [直连,手动代理]
 
   - name: 哔哩哔哩
     type: select
-    proxies: [🇭🇰 香港节点,🇨🇳 台湾节点,手动代理,直连]
+    proxies: [直连,🇭🇰 香港节点,🇨🇳 台湾节点,手动代理]
 
   - name: Disney+
     type: select
@@ -80,10 +76,21 @@ proxy-groups:
 
   - name: TELEGRAM
     type: select
-    proxies:  [🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,手动代理]
+    proxies: [🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,手动代理] 
 
+  - name: 国内连接
+    type: select
+    proxies: [直连,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,手动代理]
 
+  - name: 漏网之鱼
+    type: select
+    proxies: [手动代理,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,直连]
+    
   #分隔,下面是地区分组
+  - name: 全部节点
+    type: select
+    include-all: true
+
   - name: 🇭🇰 香港节点
     type: select
     include-all: true
@@ -103,6 +110,11 @@ proxy-groups:
     type: select
     include-all: true
     filter: "(?i)新加坡|坡|狮城|SG|Singapore"
+
+  - name: 其它地区
+    type: select
+    include-all: true
+    filter: "(?i)^(?!.*(?:港|HK|hk|Hong Kong|HongKong|hongkong|台|TW|Taiwan|日本|东京|沪日|深日|JP|Japan|新加坡|坡|狮城|SG|Singapore)).*"
 
 rule-providers:
   Apple:
@@ -227,9 +239,9 @@ rules:
   - RULE-SET,Telegram,TELEGRAM
   - RULE-SET,Download,直连
   - RULE-SET,Lan,直连
-  - RULE-SET,China,直连
-  - RULE-SET,China_Domain,直连
+  - RULE-SET,China,国内连接
+  - RULE-SET,China_Domain,国内连接
   - RULE-SET,Proxy,手动代理
   - RULE-SET,Proxy_Domain,手动代理
-  - GEOIP,CN,直连
-  - MATCH,手动代理
+  - GEOIP,CN,国内连接
+  - MATCH,漏网之鱼
