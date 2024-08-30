@@ -105,41 +105,41 @@ proxies:
 
 proxy-groups:
 
-  - name: 手动代理
+  - name: 默认代理
     type: select
-    proxies: [全部节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点]
+    proxies: [全部节点,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,其它地区]
 
   - name: 苹果服务
     type: select
-    proxies: [直连,手动代理]
+    proxies: [直连,默认代理]
 
   - name: 微软服务
     type: select
-    proxies: [直连,手动代理]
+    proxies: [直连,默认代理]
 
   - name: 哔哩哔哩
     type: select
-    proxies: [直连,🇭🇰 香港节点,🇨🇳 台湾节点,手动代理]
+    proxies: [直连,🇭🇰 香港节点,🇨🇳 台湾节点]
 
   - name: Disney+
     type: select
-    proxies: [🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,手动代理]
+    proxies: [🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,默认代理,其它地区]
 
   - name: NETFLIX
     type: select
-    proxies: [🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,手动代理]
+    proxies: [🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,默认代理,其它地区]
 
   - name: TELEGRAM
     type: select
-    proxies: [🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,手动代理] 
+    proxies: [🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,默认代理,其它地区] 
 
   - name: 国内连接
     type: select
-    proxies: [直连,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,手动代理]
+    proxies: [直连,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,默认代理,其它地区]
 
   - name: 漏网之鱼
     type: select
-    proxies: [手动代理,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,直连]
+    proxies: [默认代理,🇭🇰 香港节点,🇨🇳 台湾节点,🇯🇵 日本节点,🇸🇬 狮城节点,其它地区,直连]
     
   #分隔,下面是地区分组
   - name: 全部节点
